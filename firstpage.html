@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco's Fittness</title>
+    <style>
+        /* CSS reset */
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(17, 3, 3);
+            /* font-size: 30px; */
+            margin: 0px;
+            padding: 0px;
+            /* background: url('ts1989.jpeg'); */
+            background-color: #000000;
+            height: 5040px;
+            
+            
+            
+            
+        }
+
+        .left {
+            position: fixed;
+            display: inline-block;
+            /* border: 2px solid black; */
+            position: absolute;
+            left: 38px;
+            top: 20px;
+            color: aliceblue;
+
+        }
+
+        .mid {
+           
+            top: 6px;
+            display: block;
+            width: 49%;
+            margin: 20px auto;
+            /* border: 2px solid rgb(35, 200, 85); */
+
+        }
+
+        .right {
+            position: fixed;
+            right: 34px;
+            top: 20px;
+            display: inline-block;
+
+            /* border: 2px solid rgb(215, 31, 31); */
+
+        }
+
+        .left img {
+            width: 189px;
+            filter: invert(100%)
+        }
+
+        .left div {
+            font-size: 23px;
+            text-align: center;
+            ;
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 25px;
+        }
+
+        .navbar li a {
+            color: aliceblue;
+            text-decoration: none;
+            padding: 34px 23px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a:active {
+
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .btn {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0px 9px;
+            color: white;
+            background-color: black;
+            padding: 5px 25px;
+            border: 2px solid grey;
+            border-radius: 7px;
+            font-size: 23px;
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+            background-color: rgb(116, 108, 108);
+        }
+
+        .container {
+            border: 3px solid rgb(255, 19, 19);
+            background: url('sporto.avif');
+            background-color: beige;
+            margin: 285px 500px;
+            padding: 51px 59px;
+            width: 35%;
+            border-radius: 23px;
+        }
+
+        .container h1 {
+            
+            text-align: center;
+        }
+
+        .form-group input {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            display: block;
+            width: 450px;
+            margin: 7px auto;
+            padding: 6px;
+            font-size: 25px;
+            border-radius: 23px;
+        }
+
+        .container button {
+            display: block;
+            width: 178px;
+            margin: 31px auto;
+        }
+        .hea{
+            position: sticky;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="tut26.css">
+
+<body>
+    <header class="hea">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="sporto.avif" alt="not loading">
+            <div>Marco's fitness</div>
+        </div>
+        <!-- mid box for navigation bar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Fitness calculator</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+
+        </div>
+        <!-- right box for button -->
+        <div class="right">
+            <button class="btn">Call US</button>
+            <button class="btn">email US</button>
+
+        </div>
+
+        <div class="container">
+            <h1>YO bro which sports? </h1>
+            <form action="noaction.php">
+                <div class="form-group">
+                    <input type="text" name="" placeholder="enter your sport">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="enter your sport">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="enter your sport">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="enter your sport">
+                </div>
+                <button class="btn">submit</button>
+            </form>
+        </div>
+    </header>
+
+</body>
+
+</html>
