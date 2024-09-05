@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <video id="back-video" autoplay loop muted playsinline class="back-video">
+            <source id="videoSource" src="football.mp4" type="video/mp4">
+        </video>
+        <nav>
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input type="text" placeholder="Search Amazon" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+          
+            <div class="list">
+                <a href="#">HOME</a>
+                <a href="#">VENUES</a>
+                <a href="#">TEAMS</a>
+                <a href="#">CONTACT US</a>
+            </div>
+            
+
+
+        </nav>
+        <div class="content">
+            <h1>WANT TO PLaY</h1>
+            <a  class="btn" href="loginpage.html">PLAY NOW</a>    
+        </div>
+        <div class="arrow left" id="backwardArrow">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="arrow right" id="forwardArrow">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+       
+    </div>
+    <footer>
+        <div class="foot-panel1">
+            Back to top
+        </div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+        </div>
+
+        <div class="foot-panel3">
+            <div class="logo"> </div>
+        </div>
+        
+        <div class="foot-panel4">
+            <div class="pages">
+                <a> Condtion of Use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                © 1996-2024, Amazon.com, Inc. or its affiliates
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const videos = ['football.mp4', 'foot.mp4', 'video.mp4', 'basketball.mp4'];
+        const videoElement = document.getElementById('back-video');
+        const sourceElement = document.getElementById('videoSource');
+        let videoIndex = 0;
+
+        // Function to update the video source
+        function updateVideo() {
+            console.log("Changing video to:", videos[videoIndex]); // Log the new video source
+            sourceElement.src = videos[videoIndex];
+            videoElement.load(); // Reload the video element to play the new video
+            videoElement.play();
+        }
+
+        // Forward Arrow Click Event
+        document.getElementById('forwardArrow').addEventListener('click', () => {
+            videoIndex = (videoIndex + 1) % videos.length; // Move to the next video
+            updateVideo();
+        });
+
+        // Backward Arrow Click Event
+        document.getElementById('backwardArrow').addEventListener('click', () => {
+            videoIndex = (videoIndex - 1 + videos.length) % videos.length; // Move to the previous video
+            updateVideo();
+        });
+
+        // Initialize with the first video
+        updateVideo();
+    </script>
+</body>
+</html>
